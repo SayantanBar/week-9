@@ -11,7 +11,9 @@ app.use(express.json());
 
 app.use("/admin", adminRouter)
 app.use("/user", userRouter)
-
+app.get("/", (req, res) => {
+  res.json({ Message: "I'm from updated through Ci/Cd" });
+});
 
 // Connect to MongoDB
 // DONT MISUSE THIS THANKYOU!!
